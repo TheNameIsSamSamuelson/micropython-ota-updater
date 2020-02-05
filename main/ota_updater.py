@@ -28,6 +28,7 @@ class OTAUpdater:
         print('network config:', sta_if.ifconfig())
 
     def check_for_update_to_install_during_next_reboot(self):
+        OTAUpdater.using_network(ssid, password)
         current_version = self.get_version(self.modulepath(self.main_dir))
         latest_version = self.get_latest_version()
 
